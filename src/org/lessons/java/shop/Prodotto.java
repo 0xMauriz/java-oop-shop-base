@@ -28,11 +28,20 @@ public class Prodotto {
     }
 
     public BigDecimal getPriceWithIva() {
-        return this.prezzo.add(prezzo.multiply(iva)).setScale(2, RoundingMode.DOWN);
+
+        if (this.prezzo != null && this.nome != null) {
+            return this.prezzo.add(prezzo.multiply(iva)).setScale(2, RoundingMode.DOWN);
+        }
+
+        return null;
     }
 
     public String getFullName() {
-        return this.codice + "-" + this.nome;
+        if (nome != null) {
+            return this.codice + "-" + this.nome;
+        }
+
+        return null;
     }
 
 }

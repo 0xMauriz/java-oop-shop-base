@@ -14,6 +14,9 @@ public class Main {
         Prodotto oreoClassic = new Prodotto("Oreo gusto classico",
                 "Un biscotto al cacao con dentro vaglia, sempre abbastanza tossici ma vabbè.",
                 new BigDecimal(1.4), new BigDecimal(0.22));
+        Prodotto caramelleUova = new Prodotto("Caramelle Fini uova al tegamino",
+                "Caramelle a forma di uova al tegamino, parecchio buone ma lo zucchero non fà bene",
+                new BigDecimal(2.35), new BigDecimal(0.22));
 
         System.out.println(saponeDiMarsiglia.getFullName());
         System.out.println(saponeDiMarsiglia.getPrice());
@@ -26,6 +29,10 @@ public class Main {
         System.out.println(oreoClassic.getFullName());
         System.out.println(oreoClassic.getPrice());
         System.out.println(oreoClassic.getPriceWithIva());
+
+        System.out.println(caramelleUova.getFullName());
+        System.out.println(caramelleUova.getPrice());
+        System.out.println(caramelleUova.getPriceWithIva());
 
     }
 
