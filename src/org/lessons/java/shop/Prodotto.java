@@ -6,21 +6,33 @@ import java.math.RoundingMode;
 
 public class Prodotto {
 
-    public int codice;
-    public String nome;
-    public String descrizione;
-    public BigDecimal prezzo;
-    public BigDecimal iva;
+    private final int codice;
+    private String nome;
+    private String marca;
+    private BigDecimal prezzo;
+    private BigDecimal iva;
 
-    public Prodotto(String nome, String descrizione, BigDecimal prezzo, BigDecimal iva) {
+    public Prodotto(String nome, String marca, BigDecimal prezzo, BigDecimal iva) {
 
         Random randomNumber = new Random();
 
         this.codice = randomNumber.nextInt(99999);
         this.nome = nome;
-        this.descrizione = descrizione;
+        this.marca = marca;
         this.prezzo = prezzo;
         this.iva = iva;
+    }
+
+    public Prodotto(String nome, String marca) {
+
+        Random randomNumber = new Random();
+
+        this.codice = randomNumber.nextInt(99999);
+        this.nome = nome;
+        this.marca = marca;
+        this.prezzo = BigDecimal.ZERO;
+        this.iva = BigDecimal.ZERO;
+
     }
 
     public BigDecimal getPrice() {
